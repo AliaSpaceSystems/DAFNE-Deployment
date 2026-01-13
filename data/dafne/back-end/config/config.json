@@ -49,7 +49,7 @@
 		"RUNNING",
 		"PENDING"
 	],
-	"version": "4.1.0",
+	"version": "4.1.1",
 	"port": 2000,
 	"adminRole": "DATAFLOW_MANAGER",
 	"viewerRole": "DATAFLOW_VIEWER"
