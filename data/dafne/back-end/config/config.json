@@ -1,7 +1,6 @@
 {
 	"logger": {
 		"zippedArchive": false,
-		"dateFormat": "YYYY-MM-DD HH:mm:ss,SSS",
 		"maxSize": "50m",
 		"severity": "info",
 		"logname": "dafne-be--%DATE%.log",
@@ -16,6 +15,16 @@
 		"dialect": "postgres",
 		"operatorsAliases": 0
 	},
+  "report": {
+    "username": "<report-username>",
+    "password": "<report-password>",
+    "reportBackendBaseurl": "http://<report-be-url>:<report-be-port>",
+    "checkSingleDayUrl": "/reports/check-report/:day",
+    "getSingleDayReportJsonUrl": "/reports/get-report/:day",
+    "getReportJsonForPeriodUrl": "/reports/get-report-json-for-period",
+    "reportsStorageFolder": "DAFNE_REPORTS",
+    "deleteReportsCronSchedule": "0 */4 * 1 *"
+  },
 	"crypto": {
 		"symmetric": {
 			"secret": "",
