@@ -22,8 +22,7 @@
     "checkSingleDayUrl": "/reports/check-report/:day",
     "getSingleDayReportJsonUrl": "/reports/get-report/:day",
     "getReportJsonForPeriodUrl": "/reports/get-report-json-for-period",
-    "reportsStorageFolder": "DAFNE_REPORTS",
-    "deleteReportsCronSchedule": "0 */4 * 1 *"
+    "reportsStorageFolder": "DAFNE_REPORTS"
   },
 	"crypto": {
 		"symmetric": {
