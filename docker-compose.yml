@@ -20,7 +20,7 @@ services:
     container_name: be
     hostname: backend
     restart: always
-    command: bash -c "npm start"
+    command: bash -c "sh ./start.sh"
 
     ports:
       - "3000:2000"
