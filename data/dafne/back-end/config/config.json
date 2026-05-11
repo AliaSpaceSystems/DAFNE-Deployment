@@ -57,7 +57,7 @@
 		"RUNNING",
 		"PENDING"
 	],
-	"version": "4.2.0",
+	"version": "4.2.1",
 	"port": 2000,
 	"adminRole": "DATAFLOW_MANAGER",
 	"viewerRole": "DATAFLOW_VIEWER"
