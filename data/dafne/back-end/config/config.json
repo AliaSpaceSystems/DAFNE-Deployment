@@ -22,7 +22,8 @@
     "checkSingleDayUrl": "/reports/check-report/:day",
     "getSingleDayReportJsonUrl": "/reports/get-report/:day",
     "getReportJsonForPeriodUrl": "/reports/get-report-json-for-period",
-    "reportsStorageFolder": "DAFNE_REPORTS"
+    "reportsStorageFolder": "DAFNE_REPORTS",
+    "deleteReportsCronSchedule": "0 */4 * 1 *"
   },
 	"crypto": {
 		"symmetric": {
@@ -43,7 +44,7 @@
 		"url": "odata/v1/Products?$top=1",
 		"urlGSS": "odata/v2/Products?$top=1"
 	},
-	"latency": {
+	"timeliness": {
 		"schedule": "0 * * * *",
 		"enablePurge": true,
 		"purgeSchedule": "0 1 * * *",
@@ -52,12 +53,30 @@
 		"feMaxRetry": 10,
 		"tolerance": 1
 	},
+  "ingesters": {
+    "datastores": {
+      "typeList": [
+        {"type": "HFS", "url": "hfs"},
+        {"type": "SWIFT", "url": "swift"},
+        {"type": "SWIFT_GROUP", "url": "swiftgroup"},
+        {"type": "S3", "url": "s3"},
+        {"type": "S3_GROUP", "url": "s3group"},
+        {"type": "TIME_GROUP", "url": "timebased"}
+      ]
+    },
+    "credentials": {
+      "typeList": [
+        {"type": "SWIFT", "url": "swiftcredentials"},
+        {"type": "S3", "url": "s3credentials"}
+      ]
+    }
+  },
 	"requestTimeout": 30000,
 	"dataSourceStatus": [
 		"RUNNING",
 		"PENDING"
 	],
-	"version": "4.2.1",
+	"version": "4.2.2",
 	"port": 2000,
 	"adminRole": "DATAFLOW_MANAGER",
 	"viewerRole": "DATAFLOW_VIEWER"
